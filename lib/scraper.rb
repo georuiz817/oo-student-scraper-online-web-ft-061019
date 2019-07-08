@@ -12,6 +12,6 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     
   end
-scraper.new.scrape_index_page
+
 end
 
