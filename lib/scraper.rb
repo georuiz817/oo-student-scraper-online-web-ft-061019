@@ -11,9 +11,9 @@ page.css("div.student-card").each do |student |
   location = student.css(".student-location").text
 profile_url = student.css("a").attribute("href").value
 student_info = {
-  : name => name,
-  : location => location,
-  : profile_url => profile_url
+  :name => name,
+  :location => location,
+  :profile_url => profile_url
 }
 students << student_info
 end
@@ -28,17 +28,17 @@ container = page.css(".social-icon-container a").collect {
 }
 container.each do |link |
   if link.include ? ("twitter")
-student[: twitter] = link
+student[:twitter] = link
 elsif link.include ? ("linkedin")
-student[: linkedin] = link
+student[:linkedin] = link
 elsif link.include ? ("github")
-student[: github] = link
+student[:github] = link
 elsif link.include ? (".com")
-student[: blog] = link
+student[:blog] = link
 end
 end
-student[: profile_quote] = page.css(".profile-quote").text
-student[: bio] = page.css("div.description-holder p").text
+student[:profile_quote] = page.css(".profile-quote").text
+student[:bio] = page.css("div.description-holder p").text
 student
 end
 
