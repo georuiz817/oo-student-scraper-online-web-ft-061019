@@ -15,4 +15,4 @@ class Scraper
   end
 
 end
-
+Scraper.scrape_index_page(index_url)
